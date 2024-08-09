@@ -1,0 +1,239 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   background-image: linear-gradient(20deg, #000206, #17334F);
+   background-color: rgb(15 23 42/var(--tw-bg-opacity));
+   font-family: 'Poppins', sans-serif;
+   height: 120vh;
+   color: white;
+}
+header {
+   font-size: 110%;
+   text-align: center;
+   padding: 12px 0;
+}
+.timeSpace {
+   padding-right: 4px;
+}
+
+form {
+   min-height: 10vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.day-todo form input {
+   width: 86%;
+   margin: 1%;
+   padding: 0.5rem;
+   font-size: 2rem;
+   border-radius: 15px;
+   background: white;
+   border: 0;
+   box-shadow: 0px 5px 5px rgba(0, 0, 0, .3);
+}
+.day-todo form button {
+   width: 10%;
+   margin: 1%;
+   padding: 0.5rem;
+   font-size: 2rem;
+   border-radius: 15px;
+   background: white;
+   border: 2px solid white;
+   box-shadow: 0px 5px 5px rgba(0, 0, 0, .3);
+}
+form button {
+   color: black;
+   background-color: white; 
+   cursor: pointer;
+   transition: all .3s ease;
+   opacity: .85;
+}
+form button:hover {
+   opacity: 1;
+}
+.todo-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.todo-list {
+   min-width: 100%;
+   list-style: none;
+}
+.todo {
+   color: black;
+   font-size: 1.5rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   transition: all .5s ease;
+   border-radius: 10px;
+}
+.todo > div {
+   margin: 4px;
+   flex: 1;
+   border-radius: 15px;
+   background-color: white;
+   padding: 10px;
+   box-shadow: 0px 3px 3px rgba(0, 0, 0, .2);
+}
+.trash-btn {
+   background: white;
+   color: black;
+   border: none;
+   padding: 1.1rem .7rem;
+   cursor: pointer;
+   font-size: 1rem;
+   border-radius: 10px;
+   box-shadow: 0px 3px 3px rgba(0, 0, 0, .2);
+   margin-left: 4px;
+}
+
+.todo-item {
+   padding: 0 .5rem;
+}
+.fa-trash {
+   pointer-events: none;
+}
+
+.fall {
+   transform: translateY(8rem) rotateZ(20deg);
+   opacity: 0;
+}
+
+
+/*-- Week Todo --*/
+.week-todo form input {
+   width: 86%;
+   margin: 1%;
+   padding: 0.5rem;
+   font-size: 2rem;
+   border-radius: 15px;
+   background: white;
+   border: 0;
+   box-shadow: 0px 5px 5px rgba(0, 0, 0, .3);
+}
+.week-todo form button {
+   width: 10%;
+   margin: 1%;
+   padding: 0.5rem;
+   font-size: 2rem;
+   border-radius: 15px;
+   background: white;
+   border: 2px solid white;
+   box-shadow: 0px 5px 5px rgba(0, 0, 0, .3);
+}
+.week-todo form button {
+   color: black;
+   background-color: white; 
+   cursor: pointer;
+   transition: all .3s ease;
+   opacity: .85;
+}
+.week-todo form button:hover {
+   opacity: 1;
+}
+.todo-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.todo-list-week {
+   min-width: 100%;
+   list-style: none;
+}
+.todo-week {
+   color: black;
+   font-size: 1.5rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   transition: all .5s ease;
+   border-radius: 10px;
+}
+.todo-week > div {
+   margin: 4px;
+   flex: 1;
+   border-radius: 15px;
+   background-color: white;
+   padding: 10px;
+   box-shadow: 0px 3px 3px rgba(0, 0, 0, .2);
+}
+.trash-btn-week {
+   background: white;
+   color: black;
+   border: none;
+   padding: 1.1rem .7rem;
+   cursor: pointer;
+   font-size: 1rem;
+   border-radius: 10px;
+   box-shadow: 0px 3px 3px rgba(0, 0, 0, .2);
+   margin-left: 4px;
+}
+
+.todo-item {
+   padding: 0 .5rem;
+}
+.fa-trash {
+   pointer-events: none;
+}
+
+.fall {
+   transform: translateY(8rem) rotateZ(20deg);
+   opacity: 0;
+}
+
+
+.flex-container {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   max-width: 1600px;
+   margin: 0 auto;
+   justify-content: center;
+ }
+
+ .flex-col-week {
+   width: 40%;
+   max-width: 40%;
+   padding: 25px 25px 50px;
+ }
+ .week-todo {
+   background: linear-gradient(310deg, #6031D2 0%, #0066ff 100%);
+   background: #6031D2;
+   text-align: center;
+   color: white;
+   font-size: 40px;
+   box-shadow: 0 5px 9px 0 #0000008c;
+   border-radius: 20px;
+   box-sizing: border-box;
+   padding: 15px 15px 25px;
+ }
+ .flex-col-day {
+   width: 60%;
+   max-width: 60%;
+   padding: 25px 25px 50px;
+ }
+ .day-todo {
+   background: linear-gradient(310deg, #0066ff 0%, #6031D2 100%);
+   background: #0066ff;
+   text-align: center;
+   color: white;
+   font-size: 40px;
+   box-shadow: 0 5px 9px 0 #0000008c;
+   border-radius: 20px;
+   box-sizing: border-box;
+   padding: 15px 15px 25px;
+ }
+ @media (max-width: 992px) {
+   .flex-col-week,
+   .flex-col-day {
+     flex: 100%;
+     max-width: 100%;
+   }
+ }

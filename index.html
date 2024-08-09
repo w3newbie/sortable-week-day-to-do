@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My To Do List</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="fav.png">
+</head>
+<body>
+   
+<!----- HEADER ----->
+   <header>
+      <h1>My Sortable, Responsive To Do List</h1>
+
+      <div class="display-date" style="font-size: 22px; text-align: center; padding: 6px 0 8px;">
+         <span id="day" class="timeSpace">day</span>,
+         <span id="daynum" class="timeSpace">00</span>
+         <span id="month" class="timeSpace">month</span>
+         <span id="year" class="timeSpace">0000</span>
+         <span class="display-time"></span>
+      </div>
+
+      <h3 style="text-align: center; font-size: 25px;">just do it. <i class="fa-brands fa-dribbble"></i></h3>
+
+    </header>
+<!----- END HEADER ----->
+
+
+<!-- MAIN TO DO SECTION -->
+   <section class="todo-section" style="padding: 20px 0;">
+      <div class="flex-container">
+
+         <div class="flex-col-week">
+            <div class="week-todo">
+               <p><i class="fa-solid fa-calendar-week"></i></p>
+               <p>This Week's Tasks</p>
+               <form>
+                  <input type="text" class="todo-input-week">
+                  <button class="todo-button-week" type="submit">
+                     <i class="fa-solid fa-plus-square"></i>
+                  </button>
+               </form>
+               <div class="todo-container">
+                  <div class="todo-list-week" id="todo-list-week-id"></div>
+               </div>
+            </div>
+         </div>
+
+         <div class="flex-col-day">
+            <div class="day-todo">
+               <p><i class="fa-solid fa-calendar-day"></i></p>
+               <p>Today's Tasks</p>
+               <form>
+                  <input type="text" class="todo-input">
+                  <button class="todo-button" type="submit">
+                     <i class="fa-solid fa-plus-square"></i>
+                  </button>
+               </form>
+               <div class="todo-container">
+                  <div class="todo-list">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </section>
+<!-- END MAIN TO DO SECTION -->
+
+
+<!-- DAILY HABITS -->
+   <div class="flex-container">
+      <div class="habits">
+         <h2>Daily Habits Reminder</h2>
+         <ul style="padding-left: 16px; font-size: 17px;">
+            <li>Limit caffeine</li>
+            <li>Morning workout</li>
+            <li>Eat healthy</li>
+            <li>Walk after meals</li>
+            <li>No screens before bed</li>
+            <li>...</li>
+         </ul>
+      </div>
+   </div>
+<!-- END DAILY HABITS -->
+
+
+   <p style="padding-top: 50px; text-align: center;">Sortable items revert to original order and week tasks move to day tasks on refresh. Reminder: add caching to correct.</p>
+
+   
+   <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+   <script type="text/javascript">
+      new Sortable(document.getElementById('todo-list-week-id'));
+
+      var elements = document.getElementsByClassName('todo-list');
+
+      for (var i = 0; i < elements.length; i++) {
+         new Sortable(elements[i], {
+            group: 'shared',
+            invertSwap: true
+         });
+      }
+   </script>
+
+   <script src="week-todo.js"></script>
+   <script src="day-todo.js"></script>
+   <script src="snippets.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
